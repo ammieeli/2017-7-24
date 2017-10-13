@@ -1,5 +1,4 @@
 function Drag(id) {
-<<<<<<< HEAD
 	box.addEventListener('mousedown',down);
     function down(ev){
         var disX = ev.clientX - this.offsetLeft;
@@ -9,10 +8,11 @@ function Drag(id) {
             box.style.top = ev.clientY - disY + 'px';
         }
         
+		function up(ev){
+	            document.removeEventListener('mouseup',up);
+	            document.removeEventListener('mousemove',move);
+	       }
         ev.preventDefault();
         
     }
-
-	
-
 }
